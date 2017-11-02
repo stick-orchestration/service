@@ -6,7 +6,7 @@ namespace Stick\Service;
  * Class DataObject
  * @package Stick\Service
  */
-class DataObject
+class DataObject implements DataObjectInterface
 {
     /**
      * @var array

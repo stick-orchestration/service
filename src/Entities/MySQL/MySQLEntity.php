@@ -15,6 +15,10 @@ class MySQLEntity extends ServiceEntity
 {
     use ActionCallMethodTrait;
 
+    /**
+     * @param ServiceInterface $applicant
+     * @return GrantInterface
+     */
     public function addObject(ServiceInterface $applicant) : GrantInterface
     {
         //cretae new Database, User and set PWD
