@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Sitck\\Service\\": "src/"
+      "Stick\\Service\\": "src/"
     }
   },
   "autoload-dev": {
