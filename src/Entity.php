@@ -8,23 +8,23 @@ namespace Stick\Service;
 class Entity extends DataObject implements EntityInterface
 {
     /**
-     * @var DataObjectInterface
+     * @var MetadataObjectInterface
      */
     public $metadata;
 
     /**
-     * @return DataObjectInterface
+     * @return MetadataObjectInterface
      */
-    public function getMetadata() : DataObjectInterface
+    public function getMetadata(): MetadataObjectInterface
     {
         return $this->metadata;
     }
 
     /**
-     * @param DataObjectInterface $metadata
+     * @param MetadataObjectInterface $metadata
      * @return Entity
      */
-    public function setMetadata(DataObjectInterface $metadata) : Entity
+    public function setMetadata(MetadataObjectInterface $metadata): Entity
     {
         $this->metadata = $metadata;
         return $this;
