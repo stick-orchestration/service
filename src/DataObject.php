@@ -18,6 +18,9 @@ class DataObject implements DataObjectInterface
      */
     public function getData(): array
     {
+        if($this->data == null) {
+            $this->data = [];
+        }
         return $this->data;
     }
 
