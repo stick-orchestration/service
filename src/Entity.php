@@ -3,9 +3,9 @@
 namespace Stick\Service;
 
 /**
- * Abstract class Entity
+ * Class Entity
  */
-abstract class Entity extends DataObject implements EntityInterface
+class Entity extends DataObject implements EntityInterface
 {
     /**
      * @var DataObjectInterface
