@@ -3,10 +3,10 @@
 namespace Stick\Service;
 
 /**
- * Interface AccessObject
+ * Interface MetadataInterface
  * @package Stick\Service
  */
-interface AccessObjectInterface
+interface MetadataInterface
 {
     /**
      * @return ServiceInterface
