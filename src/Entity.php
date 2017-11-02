@@ -3,9 +3,9 @@
 namespace Stick\Service;
 
 /**
- * Abstract class BaseService
+ * Abstract class Entity
  */
-abstract class BaseEntity extends DataObject
+abstract class Entity extends DataObject
 {
     /**
      * @var DataObject

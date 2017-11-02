@@ -3,10 +3,10 @@
 namespace Stick\Service;
 
 /**
- * Interface AccessGrant
+ * Interface GrantInterface
  * @package Stick\Service
  */
-interface AccessGrant
+interface GrantInterface
 {
     /**
      * @param ServiceInterface $applicant

@@ -10,12 +10,19 @@ interface ServiceInterface
 {
     /**
      * @param ServiceInterface $applicant
-     * @return AccessGrant
+     * @return GrantInterface
      */
-    public function addObject(ServiceInterface $applicant): AccessGrant;
+    public function addObject(ServiceInterface $applicant): GrantInterface;
 
     /**
-     * @param AccessGrant $object
+     * @param GrantInterface $object
      */
-    public function removeObject(AccessGrant $object): void;
+    public function removeObject(GrantInterface $object): void;
+
+    /**
+     * @param string $action
+     * @param array ...$args
+     * @return mixed
+     */
+    public function executeAction(string $action, ...$args);
 }
