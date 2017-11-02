@@ -35,6 +35,7 @@ class Entity extends DataObject implements EntityInterface
      */
     public function __construct()
     {
+        parent::__construct();
         $this->metadata = new MetadataObject();
     }
 }

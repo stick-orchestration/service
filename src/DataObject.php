@@ -18,9 +18,6 @@ class DataObject implements DataObjectInterface
      */
     public function getData(): array
     {
-        if($this->data == null) {
-            $this->data = [];
-        }
         return $this->data;
     }
 
@@ -31,5 +28,13 @@ class DataObject implements DataObjectInterface
     public function setData(array $data): void
     {
         $this->data = $data;
+    }
+
+    /**
+     * DataObject constructor.
+     */
+    public function __construct()
+    {
+        $this->data = [];
     }
 }
