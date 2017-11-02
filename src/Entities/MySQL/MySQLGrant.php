@@ -2,14 +2,14 @@
 
 namespace Stick\Service\Entities\MySQL;
 
-use Stick\Service\BaseEntity;
+use Stick\Service\Entities\GrantEntity;
 use Stick\Service\GrantMetadataTrait;
 
 /**
- * Class AccesGrant
+ * Class MySQLGrant
  * @package Stick\Service\Entities\MySQL
  */
-class MySQLGrant extends BaseEntity implements MySQLAccessGrantInterface, \ArrayAccess
+class MySQLGrant extends GrantEntity implements MySQLGrantInterfaceInterface, \ArrayAccess
 {
     use GrantMetadataTrait;
 
@@ -50,7 +50,7 @@ class MySQLGrant extends BaseEntity implements MySQLAccessGrantInterface, \Array
      */
     public function resetPassword(string $password)
     {
-        $this->metadata['supplicant']->setPassword($data['user'], $password);
+        $this->getSupplicant()->executeAction('setPassword', $this->data['user'], $password);
         $this->data['password'] = $password;
     }
 

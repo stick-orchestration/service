@@ -2,13 +2,13 @@
 
 namespace Stick\Service\Entities\MySQL;
 
-use Stick\Service\AccessGrant;
+use Stick\Service\GrantInterface;
 
 /**
  * Interface MySQLAccessor
  * @package Stick\Service\Entities\MySQL
  */
-interface MySQLAccessGrantInterface extends AccessGrant
+interface MySQLGrantInterfaceInterface extends GrantInterface
 {
     /**
      * @return string

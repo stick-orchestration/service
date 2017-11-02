@@ -2,17 +2,20 @@
 
 namespace Stick\Service\Entities\MySQL;
 
-use Stick\Service\AccessGrant;
-use Stick\Service\BaseEntity;
+use Stick\Service\ActionCallMethodTrait;
+use Stick\Service\Entities\ServiceEntity;
+use Stick\Service\GrantInterface;
 use Stick\Service\ServiceInterface;
 
 /**
  * Class MySQLService
  * @package Stick\Service\Entities\MySQL
  */
-class MySQLEntity extends BaseEntity implements ServiceInterface
+class MySQLEntity extends ServiceEntity
 {
-    public function addObject(ServiceInterface $applicant) : AccessGrant
+    use ActionCallMethodTrait;
+
+    public function addObject(ServiceInterface $applicant) : GrantInterface
     {
         //cretae new Database, User and set PWD
         $grant = new MySQLGrant;
@@ -23,22 +26,12 @@ class MySQLEntity extends BaseEntity implements ServiceInterface
     }
 
     /**
-     * @param AccessGrant $object
+     * @param GrantInterface $object
      */
-    public function removeObject(AccessGrant $object): void
+    public function removeObject(GrantInterface $object): void
     {
-        // TODO: Implement removeObject() method.
+        return;
     }
-
-    /**
-     * @param ServiceInterface $applicant
-     * @return AccessGrant
-     */
-    public function getObject(ServiceInterface $applicant) : AccessGrant
-    {
-        // TODO: Implement getObject() method.
-    }
-
 
     public function setPassword(string $user, string $password)
     {
