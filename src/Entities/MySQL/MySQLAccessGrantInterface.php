@@ -8,7 +8,7 @@ use Stick\Service\AccessGrant;
  * Interface MySQLAccessor
  * @package Stick\Service\Entities\MySQL
  */
-interface MySQLAccessorInterface extends AccessGrant
+interface MySQLAccessGrantInterface extends AccessGrant
 {
     /**
      * @return string

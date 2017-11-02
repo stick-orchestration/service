@@ -2,20 +2,16 @@
 
 namespace Stick\Service\Entities\MySQL;
 
-use Stick\Service\ObjectMetadata;
-use Stick\Service\DataObject;
+use Stick\Service\BaseEntity;
+use Stick\Service\GrantMetadataTrait;
 
 /**
  * Class AccesGrant
  * @package Stick\Service\Entities\MySQL
  */
-class MySQLGrant extends DataObject implements MySQLAccessorInterface, \ArrayAccess
+class MySQLGrant extends BaseEntity implements MySQLAccessGrantInterface, \ArrayAccess
 {
-
-    /**
-     * @var ObjectMetadata
-     */
-    public $metadata;
+    use GrantMetadataTrait;
 
     /**
      * @return string
