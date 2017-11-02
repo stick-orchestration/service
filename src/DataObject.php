@@ -3,10 +3,10 @@
 namespace Stick\Service;
 
 /**
- * Abstract class DataObject
+ * Class DataObject
  * @package Stick\Service
  */
-abstract class DataObject
+class DataObject
 {
     /**
      * @var array

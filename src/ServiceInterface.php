@@ -16,9 +16,8 @@ interface ServiceInterface
 
     /**
      * @param AccessGrant $object
-     * @return mixed
      */
-    public function removeObject(AccessGrant $object);
+    public function removeObject(AccessGrant $object): void;
 
     /**
      * @param ServiceInterface $applicant
