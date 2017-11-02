@@ -6,7 +6,7 @@ namespace Stick\Service;
  * Interface ServiceInterface
  * @package Stick\Service
  */
-interface ServiceInterface
+interface ServiceInterface extends EntityInterface
 {
     /**
      * @param ServiceInterface $applicant
