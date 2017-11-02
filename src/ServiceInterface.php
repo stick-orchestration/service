@@ -18,10 +18,4 @@ interface ServiceInterface
      * @param AccessGrant $object
      */
     public function removeObject(AccessGrant $object): void;
-
-    /**
-     * @param ServiceInterface $applicant
-     * @return AccessGrant
-     */
-    public function getObject(ServiceInterface $applicant): AccessGrant;
 }
